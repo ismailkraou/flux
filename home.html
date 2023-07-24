@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flux cinematique</title>
+    <!-- styles -->
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font nunito google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- animation css js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+                extend: {
+                    fontFamily: {
+                        myfont: ['Nunito', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- personal styles -->
+    <link rel = "stylesheet" href = "css/styles.css">
+    
+</head>
+<body class="myfont m-0 p-0">
+    <!-- navbar menu -->
+    <header id="home" class="relative m-0 p-0 clear-both w-full overflow-hidden">
+        <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 px-2 md:px-10 transition ease-in-out delay-150">
+            <div class="container mx-auto">
+                <div class="flex items-center justify-between h-16">
+                    <!-- logo mobile, tablet, pc -->
+                    <div class="w-40 h-14 overflow-hidden">
+                        <a href="#" class="h-14 overflow-hidden">
+                            <img class="block h-14 object-contain overflow-hidden" src="/imgs/logo.fluxCineRB.png" alt="logo">
+                        </a>
+                    </div>
+                    <!-- nav menu for pc -->
+                    <div class="hidden flex-row items-center lg:flex">
+                        <div class="ml-4 flex items-baseline space-x-4">
+                            <a href="#home" class="text-gray-300 hover:text-red-700 capitalize px-3 py-2 rounded-md font-bold text-xl">acceuil</a>
+                            <a href="#about" class="text-gray-300 hover:text-red-700 capitalize px-3 py-2 rounded-md font-bold text-xl">a propos</a>
+                            <a href="#Services" class="text-gray-300 hover:text-red-700 capitalize px-3 py-2 rounded-md font-bold text-xl">mes services</a>
+                            <a href="#portfolio" class="text-gray-300 hover:text-red-700 capitalize px-3 py-2 rounded-md font-bold text-xl">Travaux récents</a>
+                            <a href="#contact" class="text-gray-300 hover:text-red-700 capitalize px-3 py-2 rounded-md font-bold text-xl">Contact moi</a>
+                        </div>
+                    </div>
+                    <!-- nav menu hamburger Button in tablet & mobile -->
+                    <div class="block lg:hidden">
+                        <button title="menubar" id="hamburgerButton" class="text-2xl text-white hover:text-white-900 focus:outline-none focus:text-white-900">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- nav menu in tablet & mobile -->
+            <div id="dropdownMenu" class="hidden lg:hidden flex-col items-center bg-black">
+                <div class="ml-4 flex flex-col items-center">
+                    <a href="#home" class="sm-nav-item text-gray-300 hover:text-red-700 capitalize px-3 py-2 rounded-md text-2xl font-medium myfont">acceuil</a>
+                    <a href="#about" class="sm-nav-item text-gray-300 hover:text-red-700 capitalize px-3 py-2 rounded-md text-2xl font-medium">a propos</a>
+                    <a href="#Services" class="sm-nav-item text-gray-300 hover:text-red-700 capitalize px-3 py-2 rounded-md text-2xl font-medium">mes services</a>
+                    <a href="#portfolio" class="sm-nav-item text-gray-300 hover:text-red-700 capitalize px-3 py-2 rounded-md text-2xl font-medium">Travaux récents</a>
+                    <a href="#contact" class="sm-nav-item text-gray-300 hover:text-red-700 capitalize px-3 py-2 rounded-md text-2xl font-medium">Contact moi</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- header hero -->
+    <!-- change bg on scroll from transparent to black then change logo from white to black -->
+    <section id = "hero" class = "relative flex justify-center bg-black m-0 p-0 clear-both w-100 overflow-hidden">
+        <div class="hero-container-video m-0 p-0 clear-both w-100 overflow-hidden">
+            <video class="hero-video" id="mheroVideo" autoplay="autoplay" loop="loop" playsinline="" autobuffer="" muted="">
+                <source src="imgs/Derniere_realisation.mov" provider="html5" type="video/mp4">
+                Votre navigateur ne prend pas en charge la balise vidéo.
+            </video>
+        </div>
+        <div class = "hero-container-content m-0 p-0 absolute w-full h-full top-0 left-0 z-40 clear-both overflow-hidden">
+            <div class = "bg-red-100 bg-opacity-50 w-full h-full flex justify-center items-center clear-both overflow-hidden">
+                <div class="w-full text-center justify-center items-center">
+                    <h1 class="text-red-700"><span class = "typewrite font-bold md:text-8xl text-5xl text-red-700 -ml-1" data-loop = "yes" data-speed = "100" data-delay = "2000" data-words = '["Réalisation", "Cadrage", "Montage"]'></span></h1>
+                    <h3 class="text-2xl text-white mt-3">Flux Cinématique</h3>
+                
+                    <ul class = "social-links flex justify-center items-center space-x-4 m-10">
+                        <li class="p-2 text-red-700 bg-white hover:bg-gray-300 shadow hover:shadow-lg">
+                            <a href = "https://www.youtube.com/channel/UCAYY4lAGAC0bOWrsyFVR-6Q" title="youtube" class = "p-2 text-red-700 text-2xl">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="p-2 text-red-700 bg-white hover:bg-gray-300 shadow hover:shadow-lg">
+                            <a href = "https://www.instagram.com/vicsiiz/" title="instagram" class = "p-2 text-red-700 text-2xl">
+                                <i class = "fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="p-2 text-red-700 bg-white hover:bg-gray-300 shadow hover:shadow-lg">
+                            <a href = "https://vimeo.com/fvicsiiz" title="instagram" class = "p-2 text-red-700 text-2xl">
+                                <i class = "fab fa-vimeo"></i>
+                            </a>
+                        </li>
+                        <li class="p-2 text-red-700 bg-white hover:bg-gray-300 shadow hover:shadow-lg">
+                            <a href = "https://www.twitch.tv/vicsiiz" title="instagram" class = "p-2 text-red-700 text-2xl">
+                                <i class = "fab fa-twitch"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href = "#about" class = "btn-down mt-10 flex justify-center clear-both overflow-hidden" title="link to About">
+                        <i class = "fas fa-chevron-down text-red-700 hover:text-red-300 font-bold text-5xl md:text-8xl animate-bounce"></i>
+                    </a>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- main content -->
+    <main class="m-0 p-0 clear-both w-100 overflow-hidden">
+        <!-- about section -->
+        <section data-aos="fade-up" data-aos-duration="200" data-aos-anchor-placement="top-center" id = "about" class = "about m-0 p-0 py-10 bg-gray-900 clear-both w-100 overflow-hidden ">
+            <div class = "container mx-auto rounded p-5 bg-black text-white overflow-hidden">
+                <div class = "about-content grid grid-cols-4 gap-5">
+                    <div class = "about-left rounded w-100 col-span-4 md:col-span-1 order-2 md:order-1">
+                        <img class="rounded d-block h-full w-full object-cover grayscale hover:grayscale-0" src = "imgs/about-pic.jpg" alt = "">
+                    </div>
+                    <div class = "about-right col-span-4 md:col-span-3 order-1 md:order-2">
+                        <div class = "title">
+                            <h2 class="text-4xl font-bold text-red-700 after:bg-red-700 after:rounded">A propos de moi</h2>
+                        </div>
+                        <div id="seemoretext" class="max-h-20 overflow-hidden">
+                            <p class = "lead text-base leading-loose">Je suis Madjid, le créateur de Flux Cinématique. En 2021, j'ai fondé Vicsiiz Films, une entreprise passionnée par la création de productions cinématographiques uniques. Fort de notre expérience et de notre vision artistique en constante évolution, nous avons donné naissance à Flux Cinématique en 2023 pour repousser les limites de la créativité cinématographique.
+                            Chez Flux Cinématique, nous sommes une équipe dédiée à la réalisation de productions uniques et mémorables qui captivent les spectateurs. Notre approche artistique, basée sur un cadrage atypique et un style de montage distinctif, apporte dynamisme, fluidité et allure à chaque plan. Nous croyons en la puissance de l'image pour raconter des histoires inspirantes.
+                            Notre objectif est de développer l'image de vos talents et de retranscrire votre vision à l'écran, quel que soit le contexte.</p>
+                            <p class = "lead text-base leading-loose text-red-400 mb-8">Nous sommes là pour collaborer avec vous et créer des productions cinématographiques qui dépassent vos attentes.</p>
+                        </div>
+                        <button id="seemorebtn" class="text-red-700 hover:text-red-300 underline" onclick="toggleText()">Voir plus</button>
+                        
+                        <a href = "#Services" class = "btn-down mt-10 flex justify-center" title="link to Services">
+                            <i class = "fas fa-chevron-down text-2xl text-red-700 hover:text-red-300"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services section -->
+        <section id = "Services" class = "vh-100 my-auto flex m-0 py-10 clear-both w-100 overflow-hidden px-5 xl:px-0">
+            <div class = "container mx-auto">
+                <div class = "Services-content text-white">
+                    <div class = "title">
+                        <h2 class="text-4xl font-bold text-red-700 after:bg-red-700 after:rounded">Mes Services</h2>
+                    </div>
+                    <ul class = "Services-top mt-20 grid grid-cols-2 gap-10">
+                        <li data-aos="fade-right" data-aos-duration="500" data-aos-anchor-placement="top-center" class = "lead font-semibold leading-loose col-span-2 md:col-span-1"><i class = "fas fa-dot-circle text-red-700 text-xl"></i> Une société à taille humaine, rapide, efficace et mobile pour vous accompagner sur tous vos projets et de toutes tailles.</li>
+                        <li data-aos="fade-left" data-aos-duration="500" data-aos-anchor-placement="top-center" class = "lead font-semibold leading-loose col-span-2 md:col-span-1"><i class = "fas fa-dot-circle text-red-700 text-xl"></i> De part notre façon atypique de cadrer, et notre ADN Street, nous avons développé notre propre méthode de cadrage qui impose dynamisme et fluidité à l'écran.</li>
+                        <li data-aos="fade-right" data-aos-duration="500" data-aos-anchor-placement="top-center" class = "lead font-semibold leading-loose col-span-2 md:col-span-1"><i class = "fas fa-dot-circle text-red-700 text-xl"></i> Un style unique, une signature reconnue, pour un grain qui impose allure et rayonnement à l'image.</li>
+                        <li data-aos="fade-left" data-aos-duration="500" data-aos-anchor-placement="top-center" class = "lead font-semibold leading-loose col-span-2 md:col-span-1"><i class = "fas fa-dot-circle text-red-700 text-xl"></i> Une expérience unique, une imagination sans limite, une équipe de professionnels qui sauront développer l'image de vos talents et la retranscrire à l'écran dans n'importe quel contexte.</li>
+                    </ul>
+
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-center" class = "Services-bottom min-w-full mt-12 grid grid-cols-4 gap-5 md:gap-10 place-content-center">
+                        <div class="min-w-full md:min-w-auto mx-auto col-span-full md:col-span-1 text-center mb-10">
+                            <span class = "icon"><img class="w-1/2 object-contain mx-auto" src = "imgs/1-service.png" alt="Service icon"></span>
+                            <h3 class="text-red-700 font-bold text-2xl">Réactivité</h3>
+                        </div>
+                        <div class="min-w-full md:min-w-auto mx-auto col-span-full md:col-span-1 text-center mb-10">
+                            <span class = "icon"><img class="w-1/2 object-contain mx-auto" src = "imgs/2-service.png" alt="Service icon"></span>
+                            <h3 class="text-red-700 font-bold text-2xl">Réalisation</h3>
+                        </div>
+                        <div class="min-w-full md:min-w-auto mx-auto col-span-full md:col-span-1 text-center mb-10">
+                            <span class = "icon"><img class="w-1/2 object-contain mx-auto" src = "imgs/3-service.png" alt="Service icon"></span>
+                            <h3 class="text-red-700 font-bold text-2xl">cadrage</h3>
+                        </div>
+                        <div class="min-w-full md:min-w-auto mx-auto col-span-full md:col-span-1 text-center mb-10">
+                            <span class = "icon"><img class="w-1/2 object-contain mx-auto" src = "imgs/4-service.png" alt="Service icon"></span>
+                            <h3 class="text-red-700 font-bold text-2xl">Montage</h3>
+                        </div>
+                    </div>
+                    <a href = "#portfolio" class = "btn-down mt-10 flex justify-center" title="link to portfolio">
+                        <i class = "fas fa-chevron-down text-2xl text-red-700 hover:text-red-300"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- portfolio section -->
+        <section data-aos="fade-in" data-aos-duration="500" data-aos-anchor-placement="top-center" id = "portfolio" class = "vh-100 my-auto flex m-0 py-10 clear-both w-100 overflow-hidden px-5 xl:px-0">
+            <div class = "container mx-auto">
+                <div class = "portfolio-content">
+                    <div class = "title">
+                        <h2 class="text-4xl font-bold text-red-700 after:bg-red-700 after:rounded">Mes RÉALISATIONS</h2>
+                        <p id="flux" class="clear-both mt-1 mb-10">Flux cinématique</p>
+                    </div>
+
+                    <div class = "mt-5 portfolio-grid grid grid-cols-3 gap-5">
+
+                        <div data-video="https://www.youtube.com/embed/m2U-PrjvV7E" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
+                            <img src="imgs/1.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
+                            </div>
+                        </div>
+                        
+                        <div data-video="https://www.youtube.com/embed/z38C0HNkrd4" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-2 relative d-block grayscale hover:grayscale-0">
+                            <img src="imgs/2.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
+                            </div>
+                        </div>
+                        
+                        <div data-video="https://www.youtube.com/embed/mg_0PXA3izo" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
+                            <img src="imgs/3.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
+                            </div>
+                        </div>
+
+                        <div data-video="https://www.youtube.com/embed/LRmzW0Y1jcU" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
+                            <img src="imgs/4.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
+                            </div>
+                        </div>
+                        
+                        <div data-video="https://www.youtube.com/embed/oTdoo179-UE" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
+                            <img src="imgs/5.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
+                            </div>
+                        </div>
+                        
+                        <div data-video="https://www.youtube.com/embed/FLPOqICyUQs" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
+                            <img src="imgs/6.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
+                            </div>
+                        </div>
+                        
+                        <div data-video="https://www.youtube.com/embed/TSrx7yj2zjg" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
+                            <img src="imgs/7.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
+                            </div>
+                        </div>
+
+                        <div data-video="https://www.youtube.com/embed/vaDivHdEfRU" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
+                            <img src="imgs/8.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
+                            </div>
+                        </div>
+                        
+
+                        <!-- modals -->
+                        <dialog id="myModal" class="myModal w-full h-full max-w-full max-h-full inset-0 bg-black bg-opacity-75 m-0 p-0 my-auto ">
+                            <iframe id="framplayer" class="w-full h-100 md:h-full max-w-full max-h-full p-1 md:p-20" width="420" height="315" autoplay="1" src=""></iframe>
+                        </dialog>
+                    </div>
+                </div>
+                <a href = "#contact" class = "btn-down mt-10 flex justify-center" title="link to contact">
+                    <i class = "fas fa-chevron-down text-2xl text-red-700 hover:text-red-300"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- contact section -->
+        <section id = "contact" class = "vh-100 my-auto flex flex-col m-0 py-10 clear-both w-100 overflow-hidden bg-black px-5 xl:px-0">
+            <div class = "container mx-auto">
+                <div class="title">
+                    <h2 class="text-4xl font-bold text-red-700 after:bg-red-700 after:rounded">CONTACTEZ NOUS</h2>
+                    <p id="flux" class="clear-both mt-14 ">Contactez-nous dès aujourd'hui pour discuter de votre projet.</p>
+                </div>
+
+                <div class = "contact-content w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 justify-center content-center gap-5 text-2xl">
+                    
+                    <!-- METTRE UN FORMULAIRE DE CONATCT -->
+                    <div class="w-100 col-span-2">
+                        <form class="w-full mx-auto" action="">
+                            <input type = "text" name="prenom" id="prenom" class = "form-control mb-1 rounded p-2 px-4 w-full bg-white text-black placeholder-black text-base" placeholder="Votre nom"><br>
+                            <input type = "email" name="email" id="email" class = "form-control mb-1 rounded p-2 px-4 w-full bg-white text-black placeholder-black text-base" placeholder="Votre Email"><br>
+                            <input type = "sujet" name="sujet" id="sujet" class = "form-control mb-1 rounded p-2 px-4 w-full bg-white text-black placeholder-black text-base" placeholder="Sujet"><br>
+                            <textarea class = "form-control mb-1 rounded p-2 px-4 w-full h-60 text-top bg-white text-black placeholder-black text-base" placeholder="Votre Message" name="message" id="message" cols="30" rows="10" ></textarea><br>
+                            <input type = "submit" class = "btn-submit btn mb-1 mt-1 rounded p-2 px-4 bg-black border border-red-900 hover:border-white text-red-900 hover:text-white font-bold" value = "ENVOYER"><br>
+                        </form>
+                    </div>
+
+                    <div class="w-100 col-span-1">
+                        <img src="imgs/map.jpg" alt="map image" srcset="">
+                    </div>
+                    
+                </div>
+                <a href = "#insta" class = "btn-down mt-10 flex justify-center" title="link to instagram">
+                    <i class = "fas fa-chevron-down text-2xl text-red-700 hover:text-red-300"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- instagram section -->
+        <section data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-center" id = "insta" class = "w-100 lg:h-screen my-auto m-0 py-10 px-5 xl:px-0 bg-gray-900 clear-both overflow-hidden">
+            <div class = "container mx-auto">
+                <div class = "title">
+                    <h2 class="text-4xl font-bold text-red-700 after:bg-red-700 after:rounded">instagram</h2>
+                </div>
+                <!-- flex flex-col justify-center content-center items-center -->
+                <div class = "insta-content w-full h-100 grid place-content-center mt-8 xl:mt-32">
+                    <div id="instafeed-container" class="my-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 content-center align-center items-center"></div>
+                </div>
+            </div>
+            <a href = "#footer" class = "btn-down mt-10 flex justify-center" title="link to footer">
+                <i class = "fas fa-chevron-down text-2xl text-red-700 hover:text-red-300"></i>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- footer section -->
+    <section id = "footer" class = "vh-100 my-auto flex flex-col m-0 py-10 clear-both w-100 overflow-hidden bg-black px-5 xl:px-0">
+        <div class = "container mx-auto">
+            <div class="title">
+                <h2 class="text-4xl font-bold text-red-700 after:bg-red-700 after:rounded">CONTACTEZ NOUS</h2>
+                <p id="flux" class="clear-both mt-14 ">Contactez-nous dès aujourd'hui pour discuter de votre projet.</p>
+            </div>
+
+            <div class = "contact-content w-full mx-auto flex flex-col md:flex-row justify-center gap-5 text-2xl text-center">
+
+                <a href="mailto:contact@fluxcinematique.com">
+                    <p class = "lead mb-1 rounded p-2 px-4 w-full text-white"><i class = "fas fa-envelope text-red-600"></i> contact@fluxcinematique.com</p>
+                </a>
+                
+            </div>
+        </div>
+        <hr class="hr mx-auto rounder border-red-900 border-rounded border-1 mt-5">
+        <!-- footer -->
+        <footer id = "footerbottom" class = "mt-10 px-5 xl:px-0">
+            <div class = "container mx-auto">
+                <div class = "footer-content">
+                    <div>
+                        <h3 class="text-white text-2xl font-bold">Flux cinematique</h3>
+                        <div><img class="grayscale hover:grayscale-0" alt="profile" src = "imgs/about-pic.jpg"></div>
+                    </div>
+
+                    <div class="w-full d-block text-center mx-auto">
+                        <h3 class="text-white">Paris, France</h3>
+                        <ul class = "w-full d-block text-center justify-center mx-auto text-white w-full flex flex-col md:flex-row gap-5 mx-auto">
+                            <li><a class="text-base font-normal" href = "#home">acceuil</a></li>
+                            <li><a class="text-base font-normal" href = "#Services">Services</a></li>
+                            <li><a class="text-base font-normal" href = "#portfolio">Travaux</a></li>
+                            <li><a class="text-base font-normal" href = "#contact">Contact</a></li>
+                            <li><a class="text-base font-normal" href = "#insta">Instagram</a></li>
+                        </ul>
+                        <ul class="w-full d-block text-center justify-center mx-auto text-white w-full flex flex-row gap-5 mx-auto">
+                            <li>
+                                <a title="youtube" href = "https://www.youtube.com/channel/UCAYY4lAGAC0bOWrsyFVR-6Q" class = "flex">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a title="instagram" href = "https://www.instagram.com/vicsiiz/" class = "flex">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a title="vimeo" href = "https://vimeo.com/fvicsiiz" class = "flex">
+                                    <i class = "fab fa-vimeo"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a title="twitch" href = "https://www.twitch.tv/vicsii" class = "flex">
+                                    <i class = "fab fa-twitch"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href = "#home" class = "btn-down mt-10 flex justify-center" title="link to top">
+                    <i class = "fas fa-chevron-up text-2xl text-red-700 hover:text-red-300"></i>
+                </a>
+            </div>
+        </footer>
+    </section>
+    
+
+    <!-- scripts -->
+    <script src = "js/typewriting.min.js"></script>
+    <!-- animation js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- navbar mobile -->
+    <script>
+        AOS.init();
+        const modal = document.getElementById('myModal') ;
+        const modalVideo = document.getElementById('framplayer');
+        const closeModal = document.getElementById('closeModal');
+
+        modal.addEventListener('click' ,  (e)=> {
+            console.log(modal)
+            modal.close();
+            if(e.target.id !== modalVideo.id){
+                modal.close();
+            }
+        })
+
+        const workThumbs = document.querySelectorAll('.work-thumb');
+        workThumbs.forEach(e => {
+            e.addEventListener('click' , ()=> {
+                modalVideo.src = '';
+                console.log(e.getAttribute('data-video')) ;
+                modal.showModal()
+                modalVideo.src = e.getAttribute('data-video');
+            })
+        })
+
+        const hamburgerButton = document.getElementById('hamburgerButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const smnavitem = document.querySelectorAll('.sm-nav-item');
+        // sm-nav-item
+      
+        hamburgerButton.addEventListener('click', function() {
+          dropdownMenu.classList.toggle('hidden');
+        });
+        
+        smnavitem.forEach(e => {
+            e.addEventListener('click' , ()=> {
+                dropdownMenu.classList.toggle('hidden');
+            })
+        })
+
+        // Get the navbar element
+        const navbar = document.getElementById('navbar');
+
+        // Function to toggle the 'scrolled' class based on scroll position
+        function handleScroll() {
+        if (window.scrollY >= (window.innerHeight - 200) ) {
+            navbar.classList.add('bg-black');
+        } else {
+            navbar.classList.remove('bg-black');
+        }
+        }
+
+        // Listen for the scroll event and call the handleScroll function
+        window.addEventListener('scroll', handleScroll);
+
+        // see more text
+        function toggleText() {
+            const textElement = document.getElementById('seemoretext');
+            const btnElement = document.getElementById('seemorebtn');
+
+            if (textElement.classList.contains('max-h-20')) {
+                // If text is currently expanded, collapse it
+                textElement.classList.remove('max-h-20');
+                btnElement.textContent = 'Voir moins';
+            } else {
+                // If text is currently collapsed, expand it
+                textElement.classList.add('max-h-20');
+                btnElement.textContent = 'Voir plus';
+            }
+        }
+
+        // insta feeds target _black
+        const targetLinks = document.querySelectorAll("#instafeed-container a");
+
+        targetLinks.forEach(link => {
+        link.setAttribute("target", "_blank");
+        });
+    
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+	<script type="text/javascript">
+	var userFeed = new Instafeed({
+		get: 'vicsiiz',
+		target: "instafeed-container",
+    	resolution: 'low_resolution',
+        limit: 4,
+        template:'<a data-aos="zoom-in" data-aos-duration="600" data-aos-anchor-placement="top-center" target="_blank" href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a>',
+		accessToken: 'IGQVJXRG9OdF9TZAmpWNVNfRklZAa0pmM2loVko0bVZAheHFoMk9KNHdmX3hXN2lTX2VZAaWJuUkdNNmxReTh1SEIwYnZARRGpCMTdia3dWZAGVrSm0xcFk5UmNDU3hYVXFyM01JTE1SWjRRMnZANRTg2NTRmMwZDZD'
+	});
+	userFeed.run();
+	</script>
+    <!-- my js scripts -->
+    <script src="./js/scripts.js"></script>
+</body>
+</html>

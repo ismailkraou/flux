@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flux cinematique</title>
+    <!-- styles -->
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font nunito google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- animation css js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+                extend: {
+                    fontFamily: {
+                        myfont: ['Nunito', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- personal styles -->
+    <link rel = "stylesheet" href = "css/styles.css">
+    
+</head>
+<body class="myfont m-0 p-0">
+
+    <div style="width: 100vw; height: 100vh;" class="relative fixed flex items-center justify-center bg-opacity-50 bg-gray-700 clear-both overflow-hidden">
+        <div class="hero-container-video absolute m-0 p-0 w-full h-full clear-both overflow-hidden">
+            <video class="hero-video" id="mheroVideo" autoplay="autoplay" loop="loop" playsinline="" autobuffer="" muted="">
+                <source src="imgs/AcceuilSiteweb.mov" provider="html5" type="video/mp4">
+                Votre navigateur ne prend pas en charge la balise vidéo.
+            </video>
+        </div>
+        <div class="absolute z-9 top-0 left-0 w-full h-full bg-red-100 bg-opacity-50"></div>
+        <div class="z-10 flex items-center justify-center object-fit-cover clear-both overflow-hidden">
+          <div id="login-card" class="m-0 p-0 text-center rounded-lg clear-both overflow-hidden">
+                <img class="m-0 p-0 clear-both overflow-hidden" src="/imgs/logo.fluxCineRW.png" alt="" srcset="">
+                <h1 class="text-red-700 clear-both overflow-hidden mb-20"><span class = "typewrite font-bold md:text-8xl text-5xl text-red-700 m-0 p-0 -m-8" data-loop = "yes" data-speed = "100" data-delay = "2000" data-words = '["voire plus", "voire plus", "voire plus"]'></span></h1>
+                <a href = "home.html" title="see more" class = "p-2 font-bold md:text-8xl text-5xl text-red-700 shadow hover:shadow-lg clear-both overflow-hidden ">
+                    <i class="fas fa-chevron-down animate-bounce"></i>
+                </a>
+          </div>
+        </div>
+    </div>
+    
+
+    <!-- scripts -->
+    <script src = "js/typewriting.min.js"></script>
+    <!-- animation js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- navbar mobile -->
+    <script>
+        AOS.init();
+        const modal = document.getElementById('myModal') ;
+        const modalVideo = document.getElementById('framplayer');
+        const closeModal = document.getElementById('closeModal');
+
+        modal.addEventListener('click' ,  (e)=> {
+            console.log(modal)
+            modal.close();
+            if(e.target.id !== modalVideo.id){
+                modal.close();
+            }
+        })
+
+        const workThumbs = document.querySelectorAll('.work-thumb');
+        workThumbs.forEach(e => {
+            e.addEventListener('click' , ()=> {
+                modalVideo.src = '';
+                console.log(e.getAttribute('data-video')) ;
+                modal.showModal()
+                modalVideo.src = e.getAttribute('data-video');
+            })
+        })
+
+        const hamburgerButton = document.getElementById('hamburgerButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+      
+        hamburgerButton.addEventListener('click', function() {
+          dropdownMenu.classList.toggle('hidden');
+        });
+    
+    </script>
+    <!-- my js scripts -->
+    <script src="./js/scripts.js"></script>
+</body>
+</html>
