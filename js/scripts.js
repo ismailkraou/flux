@@ -1,3 +1,4 @@
+// "use strict";
 
 AOS.init();
 const modal = document.getElementById('myModal') ;
@@ -24,12 +25,22 @@ workThumbs.forEach(e => {
 
 const hamburgerButton = document.getElementById('hamburgerButton');
 const dropdownMenu = document.getElementById('dropdownMenu');
+const dropdownMenuicon = document.querySelector('#hamburgerButton i');
 const smnavitem = document.querySelectorAll('.sm-nav-item');
 // sm-nav-item
 
 hamburgerButton.addEventListener('click', function() {
   dropdownMenu.classList.toggle('hidden');
+  if(dropdownMenuicon.classList.contains('fa-bars')){
+    dropdownMenuicon.classList.remove('fa-bars');
+    dropdownMenuicon.classList.add('fa-xmark');
+  }else{
+    dropdownMenuicon.classList.remove('fa-xmark');
+    dropdownMenuicon.classList.add('fa-bars');
+  }
+  
 });
+
 
 smnavitem.forEach(e => {
     e.addEventListener('click' , ()=> {
