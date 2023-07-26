@@ -1,6 +1,9 @@
 // "use strict";
 
+// animation reset
 AOS.init();
+
+// modal setting
 const modal = document.getElementById('myModal') ;
 const modalVideo = document.getElementById('framplayer');
 const closeModal = document.getElementById('closeModal');
@@ -23,12 +26,13 @@ workThumbs.forEach(e => {
     })
 })
 
+
+// menu in mobile and tablet
 const hamburgerButton = document.getElementById('hamburgerButton');
 const dropdownMenu = document.getElementById('dropdownMenu');
 const dropdownMenuicon = document.querySelector('#hamburgerButton i');
-const smnavitem = document.querySelectorAll('.sm-nav-item');
-// sm-nav-item
-
+const smnavitem = document.querySelectorAll('.sm-nav-item');// sm-nav-item
+// hamburger Button setting
 hamburgerButton.addEventListener('click', function() {
   dropdownMenu.classList.toggle('hidden');
   if(dropdownMenuicon.classList.contains('fa-bars')){
@@ -41,43 +45,79 @@ hamburgerButton.addEventListener('click', function() {
   
 });
 
-
+// dropdown Menu setting hide and show
 smnavitem.forEach(e => {
     e.addEventListener('click' , ()=> {
         dropdownMenu.classList.toggle('hidden');
     })
 })
 
+
+// handle Scroll Y derection
 // Get the navbar element
 const navbar = document.getElementById('navbar');
 
 // Function to toggle the 'scrolled' class based on scroll position
 function handleScroll() {
-if (window.scrollY >= (window.innerHeight - 200) ) {
-    navbar.classList.add('bg-black');
-} else {
-    navbar.classList.remove('bg-black');
+    if (window.scrollY >= (window.innerHeight - 500) ) {
+        navbar.classList.add('bg-black');
+    } else {
+        navbar.classList.remove('bg-black');
+    }
 }
-}
+
+// Function to hide the navigation header based on current Scroll Pos and viewport Height 100vh
+let prevScrollpos = window.pageYOffset;
+const viewportHeight = window.innerHeight;
+
+window.onscroll = function() {
+  const currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos) {
+    // Scrolling up
+    document.querySelector("#home").classList.remove("hidden");
+    dropdownMenu.classList.add('hidden');
+    dropdownMenuicon.classList.remove('fa-xmark');
+    dropdownMenuicon.classList.add('fa-bars');
+  } else {
+    // Scrolling down
+    if (currentScrollPos > viewportHeight) {
+        document.querySelector("#home").classList.add("hidden");
+        dropdownMenu.classList.add('hidden');
+        dropdownMenuicon.classList.remove('fa-xmark');
+        dropdownMenuicon.classList.add('fa-bars');
+    }
+  }
+
+  prevScrollpos = currentScrollPos;
+};
 
 // Listen for the scroll event and call the handleScroll function
 window.addEventListener('scroll', handleScroll);
 
-// see more text
-function toggleText() {
-    const textElement = document.getElementById('seemoretext');
-    const btnElement = document.getElementById('seemorebtn');
 
-    if (textElement.classList.contains('max-h-20')) {
+
+// see more text in about sedtion
+function toggleText() {
+    // get element dots and showmoretext and seemorebtn
+    const showmoretext = document.getElementById('showmoretext');
+    const seemorebtn = document.getElementById('seemorebtn');
+    const dots = document.getElementById('dots');
+
+    if (showmoretext.classList.contains('hidden')) {
         // If text is currently expanded, collapse it
-        textElement.classList.remove('max-h-20');
-        btnElement.textContent = 'Voir moins';
+        showmoretext.classList.remove('hidden');
+        seemorebtn.textContent = 'lire moins';
+        dots.classList.add('hidden');
     } else {
         // If text is currently collapsed, expand it
-        textElement.classList.add('max-h-20');
-        btnElement.textContent = 'Voir plus';
+        showmoretext.classList.add('hidden');
+        seemorebtn.textContent = 'lire plus';
+        dots.classList.remove('hidden');
     }
 }
+
+
 
 // insta feeds target _black
 const targetLinks = document.querySelectorAll("#instafeed-container a");
@@ -88,12 +128,3 @@ link.setAttribute("target", "_blank");
 
 
 // instagram feeds
-var userFeed = new Instafeed({
-    get: 'vicsiiz',
-    target: "instafeed-container",
-    resolution: 'low_resolution',
-    limit: 4,
-    template:'<a data-aos="zoom-in" data-aos-duration="600" data-aos-anchor-placement="top-center" target="_blank" href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a>',
-    accessToken: 'IGQVJXRG9OdF9TZAmpWNVNfRklZAa0pmM2loVko0bVZAheHFoMk9KNHdmX3hXN2lTX2VZAaWJuUkdNNmxReTh1SEIwYnZARRGpCMTdia3dWZAGVrSm0xcFk5UmNDU3hYVXFyM01JTE1SWjRRMnZANRTg2NTRmMwZDZD'
-});
-userFeed.run();

@@ -58,14 +58,14 @@ img{
     height: 4px;
 }
 
-#Services{
+/* #Services{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../imgs/bg-services.jpg') center/cover no-repeat fixed;
-}
+} */
 
 /* instagram */
-#insta{
+/* #insta{
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../imgs/bg-instagram.jpg') center/cover no-repeat fixed;
-}
+} */
 
 /* inst feeds */
 #instafeed-container a {
@@ -112,23 +112,23 @@ img{
 
 
 /* Mobile Devices */
-@media (max-width: 390px) {
+/* @media (max-width: 390px) {
     #insta{
         height: 1700px;
     }
-}
+} */
 
 /* Mobile Devices */
-@media (min-width: 391px) and (max-width: 425px) {
+/* @media (min-width: 391px) and (max-width: 425px) {
     #insta{
         height: 1800px;
     }
-}
+} */
 
 /* Tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* @media (min-width: 768px) and (max-width: 1024px) {
     #insta{
         height: 1000px;
     }
-}
+} */
   

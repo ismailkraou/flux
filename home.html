@@ -31,6 +31,7 @@
     
 </head>
 <body class="myfont m-0 p-0">
+    <div id="top"></div>
     <!-- navbar menu -->
     <header id="home" class="relative m-0 p-0 clear-both w-full overflow-hidden">
         <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 px-2 md:px-10 transition ease-in-out delay-150">
@@ -78,41 +79,41 @@
     <section id = "hero" class = "relative flex justify-center bg-black m-0 p-0 clear-both w-100 overflow-hidden">
         <div class="hero-container-video m-0 p-0 clear-both w-100 overflow-hidden">
             <video class="hero-video" id="mheroVideo" autoplay="autoplay" loop="loop" playsinline="" autobuffer="" muted="">
-                <source src="imgs/Derniere_realisation.mov" provider="html5" type="video/mp4">
+                <source src="videos/Derniere_realisation.mov" provider="html5" type="video/mp4">
                 Votre navigateur ne prend pas en charge la balise vidéo.
             </video>
         </div>
         <div class = "hero-container-content m-0 p-0 absolute w-full h-full top-0 left-0 z-40 clear-both overflow-hidden">
-            <div class = "bg-red-100 bg-opacity-50 w-full h-full flex justify-center items-center clear-both overflow-hidden">
+            <div class = "w-full h-full flex justify-bottom items-end pb-10 clear-both overflow-hidden">
                 <div class="w-full text-center justify-center items-center">
                     <h1 class="text-red-700"><span class = "typewrite font-bold md:text-8xl text-5xl text-red-700 -ml-1" data-loop = "yes" data-speed = "100" data-delay = "2000" data-words = '["Réalisation", "Cadrage", "Montage"]'></span></h1>
                     <h3 class="text-2xl text-white mt-3">Flux Cinématique</h3>
                 
                     <ul class = "social-links flex justify-center items-center space-x-4 m-10">
-                        <li class="p-2 text-red-700 bg-white hover:bg-gray-300 shadow hover:shadow-lg">
+                        <li class="p-2 text-red-700 bg-black hover:bg-white shadow hover:shadow-lg">
                             <a href = "https://www.youtube.com/channel/UCAYY4lAGAC0bOWrsyFVR-6Q" title="youtube" class = "p-2 text-red-700 text-2xl">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </li>
-                        <li class="p-2 text-red-700 bg-white hover:bg-gray-300 shadow hover:shadow-lg">
+                        <li class="p-2 text-red-700 bg-black hover:bg-white shadow hover:shadow-lg">
                             <a href = "https://www.instagram.com/vicsiiz/" title="instagram" class = "p-2 text-red-700 text-2xl">
                                 <i class = "fab fa-instagram"></i>
                             </a>
                         </li>
-                        <li class="p-2 text-red-700 bg-white hover:bg-gray-300 shadow hover:shadow-lg">
+                        <li class="p-2 text-red-700 bg-black hover:bg-white shadow hover:shadow-lg">
                             <a href = "https://vimeo.com/fvicsiiz" title="instagram" class = "p-2 text-red-700 text-2xl">
                                 <i class = "fab fa-vimeo"></i>
                             </a>
                         </li>
-                        <li class="p-2 text-red-700 bg-white hover:bg-gray-300 shadow hover:shadow-lg">
+                        <li class="p-2 text-red-700 bg-black hover:bg-white shadow hover:shadow-lg">
                             <a href = "https://www.twitch.tv/vicsiiz" title="instagram" class = "p-2 text-red-700 text-2xl">
                                 <i class = "fab fa-twitch"></i>
                             </a>
                         </li>
                     </ul>
-                    <a href = "#about" class = "btn-down mt-10 flex justify-center clear-both overflow-hidden" title="link to About">
+                    <!-- <a href = "#about" class = "btn-down mt-10 flex justify-center clear-both overflow-hidden" title="link to About">
                         <i class = "fas fa-chevron-down text-red-700 hover:text-red-300 font-bold text-5xl md:text-8xl animate-bounce"></i>
-                    </a>
+                    </a> -->
                 </div>
                 
             </div>
@@ -121,27 +122,39 @@
     </section>
 
     <!-- main content -->
-    <main class="m-0 p-0 clear-both w-100 overflow-hidden">
+    <main class="m-0 p-0 w-100 clear-both overflow-hidden">
         <!-- about section -->
-        <section data-aos="fade-up" data-aos-duration="200" data-aos-anchor-placement="top-center" id = "about" class = "about m-0 p-0 py-10 bg-gray-900 clear-both w-100 overflow-hidden ">
+        <section id = "about"  data-aos="fade-up" data-aos-duration="200" data-aos-anchor-placement="top-center" class = "about m-0 p-0 py-10 bg-gray-900 clear-both w-100 overflow-hidden ">
             <div class = "container mx-auto rounded p-5 bg-black text-white overflow-hidden">
                 <div class = "about-content grid grid-cols-4 gap-5">
-                    <div class = "about-left rounded w-100 col-span-4 md:col-span-1 order-2 md:order-1">
+                    <div class = "about-left rounded w-100 col-span-4 md:col-span-1 order-2 lg:order-1">
                         <img class="rounded d-block h-full w-full object-cover grayscale hover:grayscale-0" src = "imgs/about-pic.jpg" alt = "">
                     </div>
-                    <div class = "about-right col-span-4 md:col-span-3 order-1 md:order-2">
+                    <div class = "about-right col-span-4 md:col-span-3 order-1 lg:order-2">
                         <div class = "title">
                             <h2 class="text-4xl font-bold text-red-700 after:bg-red-700 after:rounded">A propos de moi</h2>
                         </div>
-                        <div id="seemoretext" class="max-h-20 overflow-hidden">
-                            <p class = "lead text-base leading-loose">Je suis Madjid, le créateur de Flux Cinématique. En 2021, j'ai fondé Vicsiiz Films, une entreprise passionnée par la création de productions cinématographiques uniques. Fort de notre expérience et de notre vision artistique en constante évolution, nous avons donné naissance à Flux Cinématique en 2023 pour repousser les limites de la créativité cinématographique.
-                            Chez Flux Cinématique, nous sommes une équipe dédiée à la réalisation de productions uniques et mémorables qui captivent les spectateurs. Notre approche artistique, basée sur un cadrage atypique et un style de montage distinctif, apporte dynamisme, fluidité et allure à chaque plan. Nous croyons en la puissance de l'image pour raconter des histoires inspirantes.
-                            Notre objectif est de développer l'image de vos talents et de retranscrire votre vision à l'écran, quel que soit le contexte.</p>
-                            <p class = "lead text-base leading-loose text-red-400 mb-8">Nous sommes là pour collaborer avec vous et créer des productions cinématographiques qui dépassent vos attentes.</p>
+                        <div class="overflow-hidden">
+                            <p class = "lead text-lg leading-loose">
+                                Je suis Madjid, le créateur de Flux Cinématique. En 2021, j'ai fondé Vicsiiz Films, une entreprise passionnée par la création de productions cinématographiques uniques. Fort de notre expérience et de notre vision artistique en constante évolution, nous avons donné naissance à Flux Cinématique en 2023 pour repousser les limites de la créativité cinématographique.
+                                Chez Flux Cinématique, nous sommes une équipe dédiée à la réalisation de productions uniques et mémorables qui captivent les spectateurs. 
+                                Notre approche artistique, basée sur un cadrage atypique et un style de montage distinctif, apporte dynamisme,
+                                <span id="dots" class="">...</span>
+                                <span id="showmoretext" class="hidden"> 
+                                fluidité et allure à chaque plan. 
+                                Nous croyons en la puissance de l'image pour raconter des histoires inspirantes.Notre objectif est de développer l'image de vos talents et de retranscrire votre vision à l'écran, quel que soit le contexte.<br><span class = "lead text-base leading-loose text-red-400 font-bold">Nous sommes là pour collaborer avec vous et créer des productions cinématographiques qui dépassent vos attentes.</span>
+                                </span>
+                                <span>
+                                    <!-- rounded bg-red-700 px-3 py-0 text-white hover:text-black align-left -->
+                                    <button id="seemorebtn" class="rounded px-3 py-0 bg-red-700 hover:bg-red-900 text-white hover:text-gray-300 align-left" onclick="toggleText()">lire plus</button>
+                                </span>
+                            </p>
                         </div>
-                        <button id="seemorebtn" class="text-red-700 hover:text-red-300 underline" onclick="toggleText()">Voir plus</button>
+                        <!-- <div class="w-100 flex justify-end items-center -mt-1">
+                            <button id="seemorebtn" class="rounded bg-red-700 px-3 py-2 text-white hover:text-red-300 align-left" onclick="toggleText()">lire plus</button>
+                        </div> -->
                         
-                        <a href = "#Services" class = "btn-down mt-10 flex justify-center" title="link to Services">
+                        <a href = "#Services" class = "btn-down mt-10 flex justify-center items-end" title="link to Services">
                             <i class = "fas fa-chevron-down text-2xl text-red-700 hover:text-red-300"></i>
                         </a>
                     </div>
@@ -150,7 +163,7 @@
         </section>
 
         <!-- Services section -->
-        <section id = "Services" class = "vh-100 my-auto flex m-0 py-10 clear-both w-100 overflow-hidden px-5 xl:px-0">
+        <section id = "Services" class = "vh-100 my-auto flex m-0 py-10 clear-both w-100 overflow-hidden px-5 xl:px-0" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('imgs/bg-services.jpg') center/cover no-repeat fixed;">
             <div class = "container mx-auto">
                 <div class = "Services-content text-white">
                     <div class = "title">
@@ -165,19 +178,31 @@
 
                     <div data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-center" class = "Services-bottom min-w-full mt-12 grid grid-cols-4 gap-5 md:gap-10 place-content-center">
                         <div class="min-w-full md:min-w-auto mx-auto col-span-full md:col-span-1 text-center mb-10">
-                            <span class = "icon"><img class="w-1/2 object-contain mx-auto" src = "imgs/1-service.png" alt="Service icon"></span>
+                            <!-- <span class = "icon"><img class="w-1/2 object-contain mx-auto" src = "imgs/1-service.png" alt="Service icon"></span> -->
+                            <span class = "icon w-100">
+                                <img class="w-1/4 object-contain mx-auto" src = "imgs/reactivity.png" alt="Service icon">
+                            </span>
                             <h3 class="text-red-700 font-bold text-2xl">Réactivité</h3>
                         </div>
                         <div class="min-w-full md:min-w-auto mx-auto col-span-full md:col-span-1 text-center mb-10">
-                            <span class = "icon"><img class="w-1/2 object-contain mx-auto" src = "imgs/2-service.png" alt="Service icon"></span>
+                            <!-- <span class = "icon"><img class="w-1/2 object-contain mx-auto" src = "imgs/2-service.png" alt="Service icon"></span> -->
+                            <span class = "icon w-100">
+                                <img class="w-1/4 object-contain mx-auto" src = "imgs/realisation.png" alt="Service icon">
+                            </span>
                             <h3 class="text-red-700 font-bold text-2xl">Réalisation</h3>
                         </div>
                         <div class="min-w-full md:min-w-auto mx-auto col-span-full md:col-span-1 text-center mb-10">
-                            <span class = "icon"><img class="w-1/2 object-contain mx-auto" src = "imgs/3-service.png" alt="Service icon"></span>
+                            <!-- <span class = "icon"><img class="w-1/2 object-contain mx-auto" src = "imgs/3-service.png" alt="Service icon"></span> -->
+                            <span class = "icon w-100">
+                                <img class="w-1/4 object-contain mx-auto" src = "imgs/cadrage.png" alt="Service icon">
+                            </span>
                             <h3 class="text-red-700 font-bold text-2xl">cadrage</h3>
                         </div>
                         <div class="min-w-full md:min-w-auto mx-auto col-span-full md:col-span-1 text-center mb-10">
-                            <span class = "icon"><img class="w-1/2 object-contain mx-auto" src = "imgs/4-service.png" alt="Service icon"></span>
+                            <!-- <span class = "icon"><img class="w-1/2 object-contain mx-auto" src = "imgs/4-service.png" alt="Service icon"></span> -->
+                            <span class = "icon w-100">
+                                <img class="w-1/4 object-contain mx-auto" src = "imgs/montage.png" alt="Service icon">
+                            </span>
                             <h3 class="text-red-700 font-bold text-2xl">Montage</h3>
                         </div>
                     </div>
@@ -189,7 +214,7 @@
         </section>
 
         <!-- portfolio section -->
-        <section data-aos="fade-in" data-aos-duration="500" data-aos-anchor-placement="top-center" id = "portfolio" class = "vh-100 my-auto flex m-0 py-10 clear-both w-100 overflow-hidden px-5 xl:px-0">
+        <section id = "portfolio" data-aos="fade-in" data-aos-duration="500" data-aos-anchor-placement="top-center" class = "vh-100 my-auto flex m-0 py-10 clear-both w-100 overflow-hidden px-5 xl:px-0">
             <div class = "container mx-auto">
                 <div class = "portfolio-content">
                     <div class = "title">
@@ -199,62 +224,77 @@
 
                     <div class = "mt-5 portfolio-grid grid grid-cols-3 gap-5">
 
-                        <div data-video="https://www.youtube.com/embed/m2U-PrjvV7E" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
-                            <img src="imgs/1.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                        <!-- https://www.youtube.com/embed/m2U-PrjvV7E -->
+                        <!-- imgs/1.jpg -->
+                        <div data-video="https://www.youtube.com/embed/m2U-PrjvV7E" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block rounded  grayscale hover:grayscale-0 clear-both overflow-hidden">
+                            <img src="imgs/1.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover scale-y-125">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
                             </div>
                         </div>
                         
-                        <div data-video="https://www.youtube.com/embed/z38C0HNkrd4" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-2 relative d-block grayscale hover:grayscale-0">
-                            <img src="imgs/2.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                        <!-- https://www.youtube.com/embed/z38C0HNkrd4 -->
+                        <!-- imgs/2.jpg -->
+                        <div data-video="https://www.youtube.com/embed/z38C0HNkrd4" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-2 relative d-block rounded  grayscale hover:grayscale-0 clear-both overflow-hidden">
+                            <img src="imgs/2.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover scale-y-125">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
                             </div>
                         </div>
                         
-                        <div data-video="https://www.youtube.com/embed/mg_0PXA3izo" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
-                            <img src="imgs/3.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                        <!-- https://www.youtube.com/embed/mg_0PXA3izo -->
+                        <!-- imgs/3.jpg -->
+                        <div data-video="https://www.youtube.com/embed/mg_0PXA3izo" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block rounded  grayscale hover:grayscale-0 clear-both overflow-hidden">
+                            <img src="imgs/3.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover scale-y-125">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
                             </div>
                         </div>
 
-                        <div data-video="https://www.youtube.com/embed/LRmzW0Y1jcU" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
-                            <img src="imgs/4.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                        <!-- https://www.youtube.com/embed/LRmzW0Y1jcU -->
+                        <!-- imgs/4.jpg -->
+                        <div data-video="https://www.youtube.com/embed/LRmzW0Y1jcU" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block rounded  grayscale hover:grayscale-0 clear-both overflow-hidden">
+                            <img src="imgs/4.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover scale-y-125">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
                             </div>
                         </div>
                         
-                        <div data-video="https://www.youtube.com/embed/oTdoo179-UE" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
-                            <img src="imgs/5.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                        <!-- https://www.youtube.com/embed/oTdoo179-UE -->
+                        <!-- imgs/5.jpg -->
+                        <div data-video="https://www.youtube.com/embed/oTdoo179-UE" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block rounded  grayscale hover:grayscale-0 clear-both overflow-hidden">
+                            <img src="imgs/5.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover scale-y-125">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
                             </div>
                         </div>
                         
-                        <div data-video="https://www.youtube.com/embed/FLPOqICyUQs" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
-                            <img src="imgs/6.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                        <!-- https://www.youtube.com/embed/FLPOqICyUQs -->
+                        <!-- imgs/6.jpg -->
+                        <div data-video="https://www.youtube.com/embed/FLPOqICyUQs" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block rounded  grayscale hover:grayscale-0 clear-both overflow-hidden">
+                            <img src="imgs/6.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover scale-y-125">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
                             </div>
                         </div>
                         
-                        <div data-video="https://www.youtube.com/embed/TSrx7yj2zjg" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
-                            <img src="imgs/7.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                        <!-- https://www.youtube.com/embed/TSrx7yj2zjg -->
+                        <!-- imgs/7.jpg -->
+                        <div data-video="https://www.youtube.com/embed/TSrx7yj2zjg" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block rounded  grayscale hover:grayscale-0 clear-both overflow-hidden">
+                            <img src="imgs/7.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover scale-y-125">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
                             </div>
                         </div>
 
-                        <div data-video="https://www.youtube.com/embed/vaDivHdEfRU" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block grayscale hover:grayscale-0">
-                            <img src="imgs/8.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover ">
+                        <!-- https://www.youtube.com/embed/vaDivHdEfRU -->
+                        <!-- imgs/8.jpg -->
+                        <div data-video="https://www.youtube.com/embed/vaDivHdEfRU" data-aos="zoom-out" data-aos-duration="500" data-aos-anchor-placement="top-center" class="work-thumb col-span-3 md:col-span-1 relative d-block rounded  grayscale hover:grayscale-0 clear-both overflow-hidden">
+                            <img src="imgs/8.jpg" alt="Video Thumbnail" class="cursor-pointer rounded d-block h-full w-full object-cover scale-y-125">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <i class="fas fa-play text-4xl text-white hover:text-red-900 p-3 rounded-full shadow-2xl shadow-gray-900"></i>
                             </div>
                         </div>
-                        
 
                         <!-- modals -->
                         <dialog id="myModal" class="myModal w-full h-full max-w-full max-h-full inset-0 bg-black bg-opacity-75 m-0 p-0 my-auto ">
@@ -273,7 +313,7 @@
             <div class = "container mx-auto">
                 <div class="title">
                     <h2 class="text-4xl font-bold text-red-700 after:bg-red-700 after:rounded">CONTACTEZ NOUS</h2>
-                    <p id="flux" class="clear-both mt-14 ">Contactez-nous dès aujourd'hui pour discuter de votre projet.</p>
+                    <p id="flux" class="text-xl font-bold text-gray-600 clear-both mt-1 mb-10">Contactez-nous dès aujourd'hui pour discuter de votre projet.</p>
                 </div>
 
                 <div class = "contact-content w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 justify-center content-center text-2xl place-content-center">
@@ -281,16 +321,16 @@
                     <!-- METTRE UN FORMULAIRE DE CONATCT -->
                     <div class="w-100 col-span-1 flex justify-center items-center object-center">
                         <form class="w-full mx-auto" action="/php/mailto.php" method="post">
-                            <input type = "text" name="prenom" id="prenom" class = "form-control mb-1 rounded p-2 px-4 w-full bg-black text-white placeholder-white text-base border border-gray-500 mb-5" placeholder="Votre nom"><br>
-                            <input type = "email" name="email" id="email" class = "form-control mb-1 rounded p-2 px-4 w-full bg-black text-white placeholder-white text-base border border-gray-500 mb-5" placeholder="Votre Email"><br>
-                            <input type = "sujet" name="sujet" id="sujet" class = "form-control mb-1 rounded p-2 px-4 w-full bg-black text-white placeholder-white text-base border border-gray-500 mb-5" placeholder="Sujet"><br>
-                            <textarea class = "form-control mb-1 rounded p-2 px-4 w-full h-60 text-top bg-black text-white placeholder-white text-base border border-gray-500 mb-5" placeholder="Votre Message" name="message" id="message" cols="30" rows="10" ></textarea><br>
-                            <input type = "submit" class = "btn-submit btn mb-1 mt-1 rounded p-2 px-4 bg-red-900 hover:bg-red-600 border border-red-900 hover:border-white text-gray-400 hover:text-white font-bold" value = "ENVOYER"><br>
+                            <input type = "text" name="prenom" id="prenom" class = "form-control mb-1 p-2 px-4 w-full bg-black text-white placeholder-white text-base border-b-2 border-gray-500 focus:border-red-500 outline-none mb-5" placeholder="Votre nom"><br>
+                            <input type = "email" name="email" id="email" class = "form-control mb-1 p-2 px-4 w-full bg-black text-white placeholder-white text-base border-b-2 border-gray-500 focus:border-red-500 outline-none mb-5" placeholder="Votre Email"><br>
+                            <input type = "sujet" name="sujet" id="sujet" class = "form-control mb-1 p-2 px-4 w-full bg-black text-white placeholder-white text-base border-b-2 border-gray-500 focus:border-red-500 outline-none mb-5" placeholder="Sujet"><br>
+                            <textarea class = "form-control mb-1 p-2 px-4 w-full bg-black text-white placeholder-white text-base border-b-2 border-gray-500 focus:border-red-500 outline-none mb-5" placeholder="Votre Message" name="message" id="message" cols="30" rows="10" ></textarea><br>
+                            <input type = "submit" class = "w-full btn-submit btn mb-1 mt-1 rounded p-2 px-4 bg-red-900 hover:bg-red-600 border border-red-900 hover:border-white text-gray-400 hover:text-white font-bold" value = "ENVOYER"><br>
                         </form>
                     </div>
 
                     <div class="p-0 m-0 w-100 col-span-1 max-h-[35rem] flex justify-center content-center">
-                        <img class="object-contain object-[center_top] h-full max-h-[35rem]" src="imgs/map.jpg" alt="map image" srcset="">
+                        <img class="object-contain object-[center_top] h-full max-h-[35rem]" src="imgs/bg-contact.jpg" alt="map image" srcset="">
                     </div>
                     
                 </div>
@@ -301,15 +341,35 @@
         </section>
 
         <!-- instagram section -->
-        <section data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-center" id = "insta" class = "w-100 lg:h-screen my-auto m-0 py-10 px-5 xl:px-0 bg-gray-900 clear-both overflow-hidden">
-            <div class = "container mx-auto">
+        <!-- vh-100 my-auto flex m-0 py-10 w-100 px-5 xl:px-0 clear-both overflow-hidden -->
+        <!-- old css "background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('imgs/bg-instagram.jpg') center/cover no-repeat fixed;" -->
+        <!-- w-100 lg:h-screen my-auto m-0 py-10 px-5 xl:px-0 bg-gray-900 clear-both overflow-hidden -->
+        <section id = "insta" class = "w-100 m-0 my-auto py-10 px-5 xl:px-0 bg-gray-900 clear-both overflow-hidden" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('imgs/bg-instagram.jpg') center/cover no-repeat fixed;">
+            <div class = "container mx-auto" data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-center">
                 <div class = "title">
                     <h2 class="text-4xl font-bold text-red-700 after:bg-red-700 after:rounded">instagram</h2>
                 </div>
                 <!-- flex flex-col justify-center content-center items-center -->
-                <div class = "insta-content w-full h-100 grid place-content-center mt-8 xl:mt-32">
+                <!-- <div class = "insta-content w-full h-100 grid place-content-center mt-8 xl:mt-32">
                     <div id="instafeed-container" class="my-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 content-center align-center items-center"></div>
-                </div>
+                </div> -->
+                <!-- test -->
+                <div id="instafeed-container" class="my-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 content-center align-center items-center">
+                    <a data-aos="zoom-in" data-aos-duration="600" data-aos-anchor-placement="top-center" target="_blank" href="https://www.instagram.com/reel/CuxZpqlA-6b/" class="aos-init aos-animate">
+                      <img title="Another project @neznezflow7 CLIP DISPONIBLE sur YouTube 🔥" src="imgs/insta-4.jpg" class="hover:scale-90 ">
+                    </a>
+                    <a data-aos="zoom-in" data-aos-duration="600" data-aos-anchor-placement="top-center" target="_blank" href="https://www.instagram.com/reel/CuUnnIQt1b5/" class="aos-init aos-animate">
+                      <img title="Phenopac débarque avec king of paname clip disponible sur youtube.✌️🥷🦍🔥" src="imgs/insta-3.jpg" class="hover:scale-90 ">
+                    </a>
+                    <a data-aos="zoom-in" data-aos-duration="600" data-aos-anchor-placement="top-center" target="_blank" href="https://www.instagram.com/tv/CdT8lNXDiBH/" class="aos-init aos-animate">
+                      <img title="Edit by me and @sana_makeupart 
+                  For @shblack224" src="imgs/insta-2.jpg" class="hover:scale-90 ">
+                    </a>
+                    <a data-aos="zoom-in" data-aos-duration="600" data-aos-anchor-placement="top-center" target="_blank" href="https://www.instagram.com/p/CafQ7oeD8Ci/" class="aos-init aos-animate">
+                      <img title="#workweek #editing" src="imgs/insta-1.jpg" class="hover:scale-90 ">
+                    </a>
+                  </div>
+                <!-- /test -->
             </div>
             <a href = "#footer" class = "btn-down mt-10 flex justify-center" title="link to footer">
                 <i class = "fas fa-chevron-down text-2xl text-red-700 hover:text-red-300"></i>
@@ -321,11 +381,6 @@
     <!-- footer section -->
     <section id = "footer" class = "vh-100 my-auto flex flex-col m-0 py-10 clear-both w-100 overflow-hidden bg-black px-5 xl:px-0">
         <div class = "container mx-auto">
-            <div class="title">
-                <h2 class="text-4xl font-bold text-red-700 after:bg-red-700 after:rounded">CONTACTEZ NOUS</h2>
-                <p id="flux" class="clear-both mt-14 ">Contactez-nous dès aujourd'hui pour discuter de votre projet.</p>
-            </div>
-
             <div class = "contact-content w-full mx-auto flex flex-col md:flex-row justify-center gap-5 text-2xl text-center">
 
                 <a href="mailto:contact@fluxcinematique.com">
@@ -377,7 +432,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href = "#home" class = "btn-down mt-10 flex justify-center" title="link to top">
+                <a href = "#top" class = "btn-down mt-10 flex justify-center" title="link to top">
                     <i class = "fas fa-chevron-up text-2xl text-red-700 hover:text-red-300"></i>
                 </a>
             </div>
