@@ -115,7 +115,7 @@ function toggleText() {
         seemorebtn.textContent = 'lire plus';
         dots.classList.remove('hidden');
     }
-}
+} 
 
 
 
